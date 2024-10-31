@@ -69,7 +69,7 @@ function loadCartTotals() {
     const totalUnits = document.getElementById("total-unidades");
     const totalPrice = document.getElementById("total-precio");
     const proceedButton = document.getElementById("proceder-al-pago"); // Botón de "Proceder al pago"
-
+ 
     let units = 0;
     let priceTotal = 0;
 
