@@ -94,6 +94,7 @@ function emptyCart() {
     localStorage.removeItem("cart");
     cart = [];
     loadCart(); // Actualizamos la vista después de vaciar
+    updateCartNumber();
 }
 
 // Agregar manejador de eventos a cada botón de "Agregar al carrito"
