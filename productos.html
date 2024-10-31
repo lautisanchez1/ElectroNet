@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Lauti\Javascript - Progamacion Web\ElectroNet Web\logo.png" type="image/x-icon">
+    <title>ElectroNet - Productos</title>
+    <link rel="stylesheet" href="styleindex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Logo ElectroNet" class="logo-img">
+                    ElectroNet
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link" href="carrito.html">
+                                <img src="carrito.png" alt="Carrito" class="img-carrito">Carrito<span id="total-carrito">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div class="main-container-productos">
+            <div id="product-container"></div>
+            <h2 class="text-center mb-4 productos-nuestros">Nuestros Productos</h2>
+            <!-- <div class="container mt-3">
+                <div class="row justify-content-end">
+                    <div class="col-md-3">
+                        <select id="sortProducts" class="form-select">
+                            <option value="" selected disabled>Ordenar por precio</option>
+                            <option value="asc" id="sort-button" onclick="sortProducts()">Menor a mayor</option>
+                            <option value="desc">Mayor a menor precio</option>
+                        </select>
+                    </div>
+                </div>
+            </div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="iphone.png" class="card-img-top" alt="Iphone 15">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Iphone 15</h5></span>
+                                <p class="card-text">Último modelo con cámara de alta resolución y batería de larga duración.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 999.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="1" data-name="Iphone 15" data-price="999.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="laptop.png" class="card-img-top" alt="Laptop HP">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Laptop HP</h5></span>
+                                <p class="card-text">Potente y ligera, perfecta para trabajo y entretenimiento.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 1299.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="2" data-name="Laptop HP" data-price="1299.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="airpods.jpg" class="card-img-top" alt="Airpods Max">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Airpods Max</h5></span>
+                                <p class="card-text">Sonido de alta calidad, llamadas inteligentes y cancelación de ruido activa.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 499.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="3" data-name="Airpods Max" data-price="499.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="smartwatch.jpg" class="card-img-top" alt="Smartwatch">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Smartwatch Pro</h5></span>
+                                <p class="card-text">Monitoreo de salud avanzado y notificaciones inteligentes.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 299.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="4" data-name="Smartwatch Pro" data-price="299.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="tablet.jpg" class="card-img-top" alt="Ipad 10ma Generación">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Ipad 10ma Generación</h5></span>
+                                <p class="card-text">Compatibilidad con Apple Pencil, ideal para productividad y entretenimiento.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 399.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="5" data-name="Ipad 10ma Generación" data-price="399.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="webcam.png" class="card-img-top" alt="Webcam Logitech">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Webcam Logitech</h5></span>
+                                <p class="card-text">Cámara de alta calidad para videollamadas, videoconferencias y streaming.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 59.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="6" data-name="Webcam Logitech" data-price="59.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="parlante.jpg" class="card-img-top" alt="Altavoz Bluetooth">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Parlante Bluetooth JBL</h5></span>
+                                <p class="card-text">Sonido potente y claro para tus fiestas.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 99.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="7" data-name="Parlante Bluetooth JBL" data-price="99.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="consola.jpg" class="card-img-top" alt="Consola de Juegos">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Playstation 5</h5></span>
+                                <p class="card-text">La última generación en entretenimiento gaming.</p>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 499.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="8" data-name="Playstation 5" data-price="499.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="drone.jpeg" class="card-img-top" alt="Drone">
+                            <div class="card-body">
+                                <span class="product-name"><h5>Drone Explorer</h5></span>
+                                <p class="card-text">Captura vistas aéreas impresionantes con facilidad.</p><br>
+                                <p class="card-text">Precio: U$S</p><span class="product-price"> 999.99</span><br>
+                                <button class="btn btn-primary add-to-cart" data-id="9" data-name="Drone Explorer" data-price="999.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>Email: lautarosanchez@electronet.com</p>
+                    <p>Teléfono: +54 9 11 3456 7890</p>
+                    <p>Dirección: Hipólito Yrigoyen 123, Temperley, Argentina</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/electronet" target="_blank">
+                            <img src="facebook.png" alt="Facebook" width="32" height="32">
+                        </a>
+                        <a href="https://www.twitter.com/electronet" target="_blank">
+                            <img src="twitter.png" alt="Twitter" width="32" height="32" class="twitter-icon">
+                        </a>
+                        <a href="https://www.instagram.com/lautiisanchez05" target="_blank">
+                            <img src="instagram.png" alt="Instagram" width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nuevomostrarcarrito.js">
+    </script><script src="nuevocarrito.js"></script>
+    
+</body>
+</html>

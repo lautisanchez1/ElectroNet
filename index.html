@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Lauti\Javascript - Progamacion Web\ElectroNet Web\logo.png" type="image/x-icon">
+    <title>ElectroNet</title>
+    <link rel="stylesheet" href="styleindex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Logo ElectroNet" class="logo-img">
+                    ElectroNet
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link" href="carrito.html">
+                                <img src="carrito.png" alt="Carrito" class="img-carrito">Carrito<span id="total-carrito">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="slogan-container">
+        <img src="slogan.jpg" alt="Descripción de la imagen" class="slogan-img">
+        <div class="text-overlay">
+          <h2>La mejor tecnología, a un clic de distancia</h2>
+        </div>
+      </div>
+    <main class="main">
+        <div class="main-container-inicio">
+            <h2 class="text-center mb-4">Sobre Nosotros</h2>
+            <p class="text-center mb-4">En ElectroNet, nos dedicamos a ofrecerte lo último en tecnología y electrónica. Nuestra misión es proporcionar productos de alta calidad a precios competitivos, con un servicio al cliente excepcional.</p>
+            <section id="about" class="py-5">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card historia">
+                                <div class="card-historia">
+                                    <h3 class="card-title">Nuestra Historia</h3>
+                                    <p class="card-text-historia">Fundada en 2020, ElectroFlex ha crecido rápidamente para convertirse en una de las tiendas de electrónica más confiables. Nos enorgullece ofrecer una amplia gama de productos que satisfacen las necesidades de nuestros clientes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-valores">
+                            <div class="card valores">
+                                <div class="card-valores">
+                                    <h3 class="card-title">Nuestros Valores</h3>
+                                    <ul class="card-text-valores">
+                                        <li class="card-contenido"><h6 class="card-contenido-titulo">Calidad:</h6>Solo ofrecemos productos de la más alta calidad.</li>
+                                        <li class="card-contenido"><h6 class="card-contenido-titulo">Innovación:</h6>Siempre estamos a la vanguardia de la tecnología.</li>
+                                        <li class="card-contenido"><h6 class="card-contenido-titulo">Servicio:</h6>Nuestro equipo está aquí para ayudarte en cada paso del camino.</li>
+                                        <li class="card-contenido"><h6 class="card-contenido-titulo">Confianza:</h6>Nos esforzamos por ganar y mantener la confianza de nuestros clientes.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h2 class="text-center mb-4">Nuevos Productos</h2>
+            <div class="container-nuevos-productos">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="iphone.png" class="card-img-top" alt="Smartphone XYZ">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Iphone 15</h5>
+                                <p class="card-text">Último modelo con cámara de alta resolución y batería de larga duración.</p>
+                                <p class="card-text">Precio: U$S 999.99</p>
+                                <div class="text-center mt-auto">
+                                    <button class="btn btn-primary add-to-cart" data-id="1" data-name="Iphone 15" data-price="999.99" data-img = "iphone.png">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="laptop.png" class="card-img-top" alt="Laptop UltraBook">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Laptop HP</h5>
+                                <p class="card-text">Potente y ligera, perfecta para trabajo y entretenimiento.</p>
+                                <p class="card-text">Precio: U$S 1299.99</p>
+                                <div class="text-center mt-auto">
+                                    <button class="btn btn-primary add-to-cart" data-id="2" data-name="Laptop HP" data-price="1299.99">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <img src="airpods.jpg" class="card-img-top" alt="Auriculares Inalámbricos">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Airpods Max</h5>
+                                <p class="card-text">Sonido de alta calidad, llamadas inteligentes y cancelación de ruido activa.</p>
+                                <p class="card-text">Precio: U$S 499.99</p>
+                                <div class="text-center mt-auto">
+                                    <button class="btn btn-primary add-to-cart" data-id="3" data-name="Airpods Max" data-price="499.99">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>Email: lautarosanchez@electronet.com</p>
+                    <p>Teléfono: +54 9 11 3456 7890</p>
+                    <p>Dirección: Hipólito Yrigoyen 123, Temperley, Argentina</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/electronet" target="_blank">
+                            <img src="facebook.png" alt="Facebook" width="32" height="32">
+                        </a>
+                        <a href="https://www.twitter.com/electronet" target="_blank">
+                            <img src="twitter.png" alt="Twitter" width="32" height="32" class="twitter-icon">
+                        </a>
+                        <a href="https://www.instagram.com/lautiisanchez05" target="_blank">
+                            <img src="instagram.png" alt="Instagram" width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="nuevomostrarcarrito.js"></script>
+    <script src="nuevocarrito.js"></script>
+</body>
+</html>

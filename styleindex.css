@@ -1,0 +1,577 @@
+/* Estilos para el encabezado */
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    height: 75px;
+    padding: 10px 0;
+    background-color: #2d81d4;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.container-nuevos-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    margin-bottom: 0;
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 50%; /* Ajusta este valor según el tamaño que desees */
+    height: 50px;
+    max-height: 25%;
+    object-fit: contain;
+    height: 50px; /* Espacio entre la imagen y el texto */
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-left: 0; /* Cambiado de 10px a 0 */
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin-right: 0;
+}
+
+.nav-link {
+    color: white !important;
+    text-decoration: none ;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    color: #2d81d4;
+}
+
+.cart-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cart-icon {
+    height: 25px; /* Hace que la altura del icono sea igual a la altura del texto */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 0.3em;
+    background: transparent; /* Espacio entre la imagen y el texto */
+}
+
+.img-carrito{
+    width: 25px;
+    background: transparent;
+}   
+
+/* Asegúrate de que el texto del enlace tenga el mismo tamaño que los otros enlaces */
+.nav-link {
+    font-size: 1rem; /* Ajusta este valor según sea necesario */
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.navbar {
+    background-color: #2d81d4; /* Cambia el color de fondo de la barra del medio */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+    color: white; /* Cambia el color del texto a blanco para mejor contraste */
+    background-color: #2d81d4;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-brand:hover {
+    color: #ffffff; /* Un color más claro para el hover */
+    background-color: #2d81d4;
+}
+
+.main {
+    background-color: #e9e9ff;
+}
+
+.navbar-custom{
+    background-color: #2d81d4;
+}
+
+.text-center{
+    margin-top: 10px; /* Ajusta este valor según sea necesario para crear el espacio deseado */
+}
+
+.col-md-6{
+    margin-top: 10px; /* Ajusta este valor según sea necesario para crear el espacio deseado */
+}
+
+.card-body{
+    text-align: center;
+}
+
+footer {
+    background-color: #221d23; /* Cambia el color de fondo del footer */
+    color: white; /* Cambia el color del texto a blanco para mejor contraste */
+    margin-top: 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .col-md-6 {
+    margin-top: 1%;
+    margin-left: 50px;
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-bottom: 1%;
+}
+
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer p, .footer a {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.footer a:hover {
+    color: #2274a5;
+    text-decoration: none;
+}
+
+.card-contenido{
+    text-align: left;
+}
+
+.card-historia{
+    text-align: center;
+    border: none;
+    background-color: rgb(223, 223, 223);
+}
+
+.card-text-historia{
+    margin-top: 25px;
+    margin-bottom: 75px;
+}
+
+.card-valores{
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+}
+
+.card-text-valores{
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.card-contenido h6 {
+    display: inline;
+    margin-right: 5px; /* Espacio entre el título y el texto */
+}
+
+#productos .card {
+    margin: 10px; /* Ajusta el margen entre las tarjetas */
+    max-width: 250px; /* Limita el ancho de las tarjetas */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+#productos .row {
+    justify-content: center; /* Asegura que las tarjetas estén centradas en su fila */
+}
+
+.contactenos{
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 100px;
+}
+
+.mb-4{
+    margin-top: 20px;
+
+}
+
+.cart-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cart-count {
+    margin-top: 10px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: rgb(62, 62, 62);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 2px;
+    font-size: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+
+
+/* Estilos para el footer */
+.footer {
+    background-color: #221d23; /* O el color que prefieras */
+    padding: 30px 0;
+}
+
+.footer .container {
+    max-width: 960px; /* Ajusta este valor según tus preferencias */
+    margin: 0 auto;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer .col-md-6 {
+    padding: 0 15px;
+}
+
+/* Estilos para la sección de contacto */
+.footer .col-md-6:first-child {
+    text-align: left;
+}
+
+.footer h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+
+/* Estilos para la sección de redes sociales */
+.footer .col-md-6:last-child {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    /* Mantener el menú oculto hasta que se haga clic en el botón */
+    #navbarNav {
+        display: none; /* Ocultar por defecto */
+        background-color: #2d81d4;
+        width: 100%; /* Asegura que ocupe el ancho completo */
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Cuando se active la clase `show`, muestra el menú */
+    #navbarNav.show {
+        display: block;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px 0;
+        color: white !important;
+        text-decoration: none;
+    }
+
+    .nav-link:hover {
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .main-container-contacto {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .contactenos {
+        margin: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px; /* Limita el ancho máximo */
+    }
+
+    .footer .row {
+        display: flex;
+        flex-direction: column;
+        align-items: first baseline;
+        width: 100%;
+    }
+
+    .footer .col-md-6 {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px; /* Añade un poco de espacio entre las secciones */
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px!important;
+    }
+    
+}
+
+
+.slogan-img {
+    width: 100%;
+    height: 350px; /* Altura fija para mantener consistencia */
+    object-fit: cover;
+    object-position: top; /* Muestra la parte superior de la imagen */
+    display: block;
+    margin: 0;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 35%; /* ajusta vertical */
+    left: 50%; /* ajusta horizontal */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* fondo semi-transparente */
+    padding: 20px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.slogan-container{
+    margin-bottom: 0;
+}
+
+.main h2 {
+    margin-top: 0;
+}
+
+.twitter-icon{
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+}
+
+.form-select{
+    margin-bottom: 10px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre "Precio:" y el valor */
+}
+
+.card-text, .product-price {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-right: 5px; /* Espacio entre "Precio:" y el valor */
+}
+
+.product-item {
+    position: relative;
+    padding-left: 20px; /* Espacio para el icono */
+    margin-bottom: 10px; /* Espacio entre items */
+  }
+  
+.product-item::before {
+    content: '';
+    background-image: url('path/to/your/icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px; /* Ajusta según el tamaño de tu icono */
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.productos-nuestros{
+    margin-top: 200px;
+}
+
+.btn-cart-width {
+    width: 80%; /* Ajusta este valor según tus preferencias */
+    max-width: 200px; /* Establece un ancho máximo si lo deseas */
+}
+
+.footer {
+    background-color: hsl(290, 9%, 13%);
+    padding: 30px 0;
+    color: white;
+}
+
+.footer .container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer .col-md-6 {
+    padding: 0 15px;
+    margin-top: 1%;
+    margin-left: 72px;
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-bottom: 1%;
+}
+
+/* Estilos para la sección de contacto */
+.footer .col-md-6:first-child {
+    text-align: left;
+}
+
+.footer h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.footer p, .footer a {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para la sección de redes sociales */
+.footer .col-md-6:last-child {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+
+.twitter-icon {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+}
+
+#total-carrito{
+    background-color: #221d23;
+    border-radius: 50%;
+    position: relative;
+    top: -15px; /* Ajusta este valor para mover el número hacia arriba */
+    font-size: 12px;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+}
+
+.main-container-inicio{
+    background-color: #e9e9ff;
+    flex: 1;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.main-container-productos{
+    background-color: #e9e9ff;
+    flex: 1;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,281 @@
+/* Estilos para el encabezado */
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    height: 75px;
+    padding: 10px 0;
+    background-color: #2d81d4;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.logo-img {
+    max-width: 50%;
+    height: 50px;
+    max-height: 25%;
+    object-fit: contain;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-left: 0;
+}
+
+.nav-link {
+    color: white !important;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.navbar {
+    background-color: #2d81d4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+    color: white;
+    background-color: #2d81d4;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-brand:hover {
+    color: #ffffff;
+    background-color: #2d81d4;
+}
+
+.navbar-custom {
+    background-color: #2d81d4;
+}
+
+.cart-icon {
+    height: 25px;
+    width: auto;
+    margin-right: 0.3em;
+    background: transparent;
+}
+
+/* Resto del CSS existente... */
+/* Estilos para el contenedor principal */
+body {
+    background-color: #e9e9ff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container-contacto {
+    background-color: #e9e9ff;
+    flex: 1;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.contactenos {
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 100px;
+}
+
+.img-carrito{
+    width: 25px;
+}   
+
+/* Estilos para el footer */
+.footer {
+    background-color: hsl(290, 9%, 13%);
+    padding: 30px 0;
+    color: white;
+}
+
+.footer .container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer .col-md-6 {
+    padding: 0 15px;
+    margin-top: 1%;
+    margin-left: 72px;
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-bottom: 1%;
+}
+
+/* Estilos para la sección de contacto */
+.footer .col-md-6:first-child {
+    text-align: left;
+}
+
+.footer h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.footer p, .footer a {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para la sección de redes sociales */
+.footer .col-md-6:last-child {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.twitter-icon {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+}
+
+/* Responsive design */
+/* Responsive design */
+@media (max-width: 767px) {
+    /* Mantener el menú oculto hasta que se haga clic en el botón */
+    #navbarNav {
+        display: none; /* Ocultar por defecto */
+        background-color: #2d81d4;
+        width: 100%; /* Asegura que ocupe el ancho completo */
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Cuando se active la clase `show`, muestra el menú */
+    #navbarNav.show {
+        display: block;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px 0;
+        color: white !important;
+        text-decoration: none;
+    }
+
+    .nav-link:hover {
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    
+    .main-container-contacto {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .contactenos {
+        margin: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+    /* Estilos del footer */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px; /* Limita el ancho máximo */
+    }
+
+    .footer .row {
+        display: flex;
+        flex-direction: column;
+        align-items: first baseline;
+        width: 100%;
+    }
+
+    .footer .col-md-6 {
+        width: 100%!important;
+        text-align: left!important;
+        margin-bottom: 10px!important; /* Añade un poco de espacio entre las secciones */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+}
+
+
+#total-carrito{
+    background-color: #221d23;
+    border-radius: 50%;
+    position: relative;
+    top: -15px; /* Ajusta este valor para mover el número hacia arriba */
+    font-size: 12px;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+}

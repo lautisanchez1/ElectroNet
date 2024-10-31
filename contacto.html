@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Lauti\Javascript - Progamacion Web\ElectroNet Web\logo.png" type="image/x-icon">
+    <title>ElectroNet - Contacto</title>
+    <link rel="stylesheet" href="stylecontacto.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Logo ElectroNet" class="logo-img">
+                    ElectroNet
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link" href="carrito.html">
+                                <img src="carrito.png" alt="Carrito" class="img-carrito">Carrito<span id="total-carrito">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-container-contacto">    
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <form class="contactenos">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escriba su mensaje aquí"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>Email: lautarosanchez@electronet.com</p>
+                    <p>Teléfono: +54 9 11 3456 7890</p>
+                    <p>Dirección: Hipólito Yrigoyen 123, Temperley, Argentina</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/electronet" target="_blank">
+                            <img src="facebook.png" alt="Facebook" width="32" height="32">
+                        </a>
+                        <a href="https://www.twitter.com/electronet" target="_blank">
+                            <img src="twitter.png" alt="Twitter" width="32" height="32" class="twitter-icon">
+                        </a>
+                        <a href="https://www.instagram.com/lautiisanchez05" target="_blank">
+                            <img src="instagram.png" alt="Instagram" width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nuevomostrarcarrito.js"></script>
+</body>
+</html>
