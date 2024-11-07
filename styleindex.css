@@ -121,7 +121,7 @@ header {
 }
 
 .main {
-    background-color: #e9e9ff;
+    background-color: #f4f4fff4;
 }
 
 .navbar-custom{
@@ -381,7 +381,11 @@ footer {
         justify-content: center;
         gap: 10px!important;
     }
-    
+ 
+    .product-card:hover {
+        transform: none !important; 
+        box-shadow: none !important;
+    }
 }
 
 
@@ -563,15 +567,21 @@ footer {
 }
 
 .main-container-inicio{
-    background-color: #e9e9ff;
+    background-color: #f4f4fff4;
     flex: 1;
     padding-top: 30px;
     padding-bottom: 50px;
 }
 
 .main-container-productos{
-    background-color: #e9e9ff;
+    background-color: #f4f4fff4;
     flex: 1;
     padding-top: 30px;
     padding-bottom: 50px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Levanta la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
