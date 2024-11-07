@@ -543,7 +543,7 @@ html, body {
         text-align: center;
         margin-bottom: 20px;
         margin-right: auto;
-        margin-left: 145px;
+        margin-left: 120px;
     }
 
     .footer {
@@ -597,6 +597,37 @@ html, body {
     #quantity{
         font-size: 16px;
         font-weight: bold;
+    }
+
+    .producto-en-carrito {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cantidad-col {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Espacio entre el botón y el número */
+        justify-content: center;
+    }
+    
+    
+    .button-rest-cart, .button-sum-cart {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0; /* Elimina el padding adicional */
+        margin: 0 0; /* Ajusta el espacio entre los botones y el número */
+    }
+    
+
+    .button-elim-cart {
+        margin-left: 30px!important;
     }
 }
 
