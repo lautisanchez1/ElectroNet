@@ -55,7 +55,7 @@ function loadCart() {
             <div class="producto-en-carrito">
                 <p class="producto-col">Producto: ${item.name}</p>
                 <p class="precio-col">Precio: U$S ${item.price}</p>
-                <p class="cantidad-col">Cantidad: <button class="button-rest-cart" onclick="updateQuantity('${item.id}', -1)">-</button><span id="quantity-${item.id}">${item.quantity}</span><button class="button-sum-cart" onclick="updateQuantity('${item.id}', 1)">+</button></p>
+                <p class="cantidad-col">Cantidad: <button class="button-rest-cart" onclick="updateQuantity('${item.id}', -1)">-</button><span id="quantity-${item.id}">${item.quantity}</span><button class="button-sum-cart" onclick="updateQuantity('${item.id}', 1)">+</button></p><button class="button-elim-cart" onclick="removeItem('${item.id}')">Eliminar Item</button>
             </div>
         `;
         container.appendChild(productElement);
@@ -69,7 +69,7 @@ function loadCartTotals() {
     const totalUnits = document.getElementById("total-unidades");
     const totalPrice = document.getElementById("total-precio");
     const proceedButton = document.getElementById("proceder-al-pago"); // Botón de "Proceder al pago"
- 
+
     let units = 0;
     let priceTotal = 0;
 
@@ -131,16 +131,18 @@ function proceedToPayment(priceTotal) {
         const { value: formValues } = await Swal.fire({
             title: "Ingrese sus datos de pago",
             html: `
-                <label>Nombre:</label>
-                <input id="swal-input1" class="swal2-input" placeholder="Nombre completo">
-                <label>Email:</label>
-                <input id="swal-input2" class="swal2-input" placeholder="Correo electrónico">
-                <label>Teléfono:</label>
-                <input id="swal-input4" class="swal2-input" placeholder="Número de teléfono">
-                <label>Dirección:</label>
-                <input id="swal-input3" class="swal2-input" placeholder="Dirección de envío">
-                <label>Tarjeta:</label>
-                <input id="swal-input5" class="swal2-input" placeholder="Número de tarjeta">
+                <div class="form-container">
+                    <label>Nombre:</label>
+                    <input id="swal-input1" class="swal2-input" placeholder="Nombre completo">
+                    <label>Email:</label>
+                    <input id="swal-input2" class="swal2-input" placeholder="Correo electrónico">
+                    <label>Teléfono:</label>
+                    <input id="swal-input4" class="swal2-input" placeholder="Número de teléfono">
+                    <label>Dirección:</label>
+                    <input id="swal-input3" class="swal2-input" placeholder="Dirección de envío">
+                    <label>Tarjeta:</label>
+                    <input id="swal-input5" class="swal2-input" placeholder="Número de tarjeta">
+                </div>
             `,
             focusConfirm: false,
             preConfirm: () => {
@@ -203,3 +205,42 @@ function proceedToPayment(priceTotal) {
 
 // Agregar el evento al botón de "Proceder al pago"
 document.getElementById("proceder-al-pago").addEventListener("click", proceedToPayment);
+
+// Función para eliminar un producto del carrito por su ID
+function removeItem(id) {
+    // Filtramos el carrito para eliminar el producto con el ID especificado
+    cart = cart.filter(item => item.id !== id);
+
+    // Guardar el carrito actualizado en localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Actualizar la visualización del carrito y los totales
+    loadCart();
+    updateCartNumber();
+}
+
+// Función para cargar los productos del carrito desde localStorage y mostrarlos
+function loadCart() {
+    const container = document.getElementById("productos-carrito-container");
+    container.innerHTML = "";
+
+    cart.forEach(item => {
+        const productElement = document.createElement("div");
+        productElement.classList.add("product-item");
+        productElement.innerHTML = `
+            <div class="producto-en-carrito">
+                <p class="producto-col">Producto: ${item.name}</p>
+                <p class="precio-col">Precio: U$S ${item.price}</p>
+                <p class="cantidad-col">Cantidad: 
+                    <button class="button-rest-cart" onclick="updateQuantity('${item.id}', -1)">-</button>
+                    <span id="quantity-${item.id}">${item.quantity}</span>
+                    <button class="button-sum-cart" onclick="updateQuantity('${item.id}', 1)">+</button>
+                </p>
+                <button class="btn btn-secondary button-elim-cart" onclick="removeItem('${item.id}')">Eliminar Item</button>
+            </div>
+        `;
+        container.appendChild(productElement);
+    });
+
+    loadCartTotals();
+}
