@@ -400,7 +400,7 @@ html, body {
 /* Contenedor principal que envuelve el contenido y el footer */
 .main-container {
     flex: 1;
-    background-color: #e5e5ee;
+    background-color: #f4f4fff4;
     text-align: center;
 }
 
@@ -505,7 +505,7 @@ html, body {
 }
 
 .main-container{
-    background-color: #e9e9ff;
+    background-color: #f4f4fff4;
     flex: 1;
     padding-top: 30px;
     padding-bottom: 50px;
@@ -555,6 +555,49 @@ html, body {
         justify-content: center;
         gap: 10px;
     }
+
+    .producto-en-carrito {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 2px solid #ddd;
+    }
+    
+    .producto-col, .precio-col, .cantidad-col {
+        text-align: center;
+        flex: 1;
+    }
+    
+    .cantidad-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Añadir un contenedor para alinear los botones y el número */
+    .cantidad-control {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-rest-cart,
+    .button-sum-cart,
+    .cantidad-numero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+
+    /* Estilo para el número de cantidad */
+    #quantity{
+        font-size: 16px;
+        font-weight: bold;
+    }
 }
 
 .producto-en-carrito {
@@ -574,8 +617,6 @@ html, body {
     display: inline-block;
     vertical-align: middle;
 }
-
-
 
 .button-sum-cart{
     padding: 5px;
@@ -599,4 +640,48 @@ html, body {
     border: white;
     border-radius: 3px;
     color: white;
+}
+
+/* Contenedor principal */
+.form-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Estilo general para las etiquetas */
+.form-container label {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Estilo para los inputs */
+.form-container input {
+    width: 75%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-elim-cart{
+    margin-bottom: 15px;
+    background-color: red !important;
+    border-color: red !important;
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.producto-col, .precio-col, .cantidad-col {
+    flex: 1;
+    text-align: center;
+}
+
+/* Estilo del botón de eliminar */
+.button-elim-cart {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: -150px;
 }
